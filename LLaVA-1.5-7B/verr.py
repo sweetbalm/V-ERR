@@ -47,7 +47,7 @@ def identify_visual_heads(attentions, response_positions, prompt_ids, top_k_head
     return visual_heads_indices
 
 
-def compute_gamma(attentions, response_positions, prompt_ids, gamma_amp=2, top_k_ratio=0.05, window_size=10):
+def compute_gamma(attentions, response_positions, prompt_ids, gamma_amp=2, top_k_ratio=0.15, window_size=10):
     device = attentions[0].device
 
     vision_token_start, vision_token_end = get_vision_token_range(prompt_ids)
