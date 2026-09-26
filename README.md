@@ -6,7 +6,7 @@ A GRPO-based post-training method that identifies modality-specialized attention
 
 V-ERR enhances vision-language models by analyzing attention patterns during generation and dynamically adjusting token-level rewards. It identifies visual-specialized attention heads and reinforces tokens that actively reference key visual evidence.
 
-![FRAMWORK](assets/framwork.pdf)
+![FRAMEWORK](assets/framework.pdf)
 
 ## Features
 
