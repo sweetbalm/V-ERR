@@ -103,7 +103,7 @@ def parse_answer(response: str, mode: str = "regex", client=None, model: str = "
           )
           
           llm_result = completion.choices[0].message.content.strip()
-          matches = re.findall(r'[A-D]', llm_result.upper())
+          matches = re.findall(r'[A-H]', llm_result.upper())
           return matches[0] if matches else ""
           
       except Exception as e:
