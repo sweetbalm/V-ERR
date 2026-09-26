@@ -339,8 +339,5 @@ trainer = VERRTrainer(
     processing_class=processor,
     reward_funcs=[sqa_reward_func, reason_reward_func]
 )
-
-print("Starting training...")
 trainer.train()
 trainer.save_model(output_dir)
-print("Training completed.")
