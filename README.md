@@ -24,7 +24,7 @@ For model-specific dependencies, refer to their official repositories or hugging
 ## Project Structure
 
 ```
-RPER/
+V-ERR/
 ├── LLaVA-1.5-7B/
 │   ├── base.py          # Standard GRPO
 │   ├── rhythm.py        # Rhythm-aware GRPO
@@ -62,7 +62,7 @@ Dataset format:
 
 ### 2. Configure Training
 
-Edit the training script (e.g., `LLaVA-1.5-7B/rper.py`):
+Edit the training script (e.g., `LLaVA-1.5-7B/verr.py`):
 ```python
 model_path = "path/to/your/model"
 output_dir = "path/to/output"
