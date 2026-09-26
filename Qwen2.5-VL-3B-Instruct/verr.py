@@ -34,7 +34,7 @@ from utils import *
 train_dataset = load_train(data_dir)
 
 
-def identify_visual_heads(attentions, response_positions, input_ids, top_k_heads=0.3):
+def identify_visual_heads(attentions, response_positions, input_ids, top_k_heads=0.2):
     L = len(attentions)
     H = attentions[0].shape[1]
 
