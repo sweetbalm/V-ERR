@@ -118,7 +118,7 @@ def compute_gamma(attentions, response_positions, input_ids, gamma_amp=2, top_k_
     return gamma.detach()
 
 
-class MyGRPOTrainer(GRPOTrainer):
+class VERRTrainer(GRPOTrainer):
     def __init__(self, *args, loss_type="grpo", **kwargs):
         super().__init__(*args, **kwargs)
         self.loss_type = loss_type
@@ -319,15 +319,12 @@ training_args = GRPOConfig(
     tf32=True
 )
 
-trainer = MyGRPOTrainer(
+trainer = VERRTrainer(
     model=model,
     args=training_args,
     train_dataset=train_dataset,
     processing_class=processor,
     reward_funcs=[sqa_reward_func, reason_reward_func]
 )
-
-print("Starting training...")
 trainer.train()
 trainer.save_model(output_dir)
-print("Training completed.")
