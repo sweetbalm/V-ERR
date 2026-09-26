@@ -1,10 +1,10 @@
-# RPER
+# V-ERR
 
 A GRPO-based post-training method that identifies modality-specialized attention pathways and recurrently reinforces evidence-checking to counteract visual-signal fading, improving VLM multimodal reasoning.
 
 ## Overview
 
-RPER enhances vision-language models by analyzing attention patterns during generation and dynamically adjusting token-level rewards. It identifies visual-specialized attention heads and reinforces tokens that actively reference key visual evidence.
+V-ERR enhances vision-language models by analyzing attention patterns during generation and dynamically adjusting token-level rewards. It identifies visual-specialized attention heads and reinforces tokens that actively reference key visual evidence.
 
 ## Features
 
@@ -26,7 +26,7 @@ RPER/
 ├── LLaVA-1.5-7B/
 │   ├── base.py          # Standard GRPO
 │   ├── rhythm.py        # Rhythm-aware GRPO
-│   ├── rper.py          # RPER
+│   ├── verr.py          # VERR
 │   ├── eval.py          # Evaluation script
 │   └── utils.py         # Utility functions
 ├── Qwen2.5-VL-3B-Instruct/
@@ -79,9 +79,9 @@ python LLaVA-1.5-7B/base.py
 python LLaVA-1.5-7B/rhythm.py
 ```
 
-**RPER:**
+**V-ERR:**
 ```bash
-python LLaVA-1.5-7B/rper.py
+python LLaVA-1.5-7B/verr.py
 ```
 
 ### 4. Evaluation
